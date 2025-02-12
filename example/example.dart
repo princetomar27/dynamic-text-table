@@ -1,4 +1,4 @@
-import 'package:dynamic_text_table/dynamic_row_table.dart';
+import 'package:dynamic_row_table/dynamic_row_table.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
