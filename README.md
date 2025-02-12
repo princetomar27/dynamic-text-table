@@ -1,16 +1,62 @@
-# dynamic_text_table
+## README.md
 
-A new Flutter project.
+# Dynamic Row Table
 
-## Getting Started
+A Flutter widget for building dynamic tables with multiple lines per cell. This package allows you to create flexible and customizable tables where each cell can contain multiple lines of data.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Customizable table with multiple lines per cell.
+- Supports dynamic row and column counts.
+- Easily configurable styles.
+- Lightweight and efficient.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Add the following to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  dynamic_row_table: ^1.0.0
+```
+
+Then run:
+
+```sh
+flutter pub get
+```
+
+## Usage
+
+Import the package:
+
+```dart
+import 'package:dynamic_row_table/dynamic_row_table.dart';
+```
+
+### Example
+
+```dart
+DynamicRowTableWidget(
+  firstIsPrefix: false,
+  mainContainerFlex: 1,
+  rows: [
+    DynamicTableRow(children: [
+      const TableRowChild(
+        color: Colors.blue,
+        alignment: Alignment.centerLeft,
+        tableRowCellChildren: [CellText(text: "Name")],
+      ),
+      TableRowChild(
+        color: Colors.blue.shade100,
+        alignment: Alignment.centerRight,
+        tableRowCellChildren: const [CellText(text: "John Doe")],
+      )
+    ]),
+  ],
+)
+```
+
+## Contribution
+
+Feel free to open an issue or submit a pull request if you'd like to contribute!
